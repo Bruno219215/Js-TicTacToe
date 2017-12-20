@@ -1,0 +1,111 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<style type="text/css">
+.table{
+width : 250px;
+height : 250px;
+border : solid 3px black;
+ border-collapse: collapse;
+
+}
+
+.td{
+border : solid 3px black;
+
+width : 33%;
+height : 33%;
+}
+</style>
+<title>Jeu en javascript</title>
+
+</head>
+<body>
+<script type="text/javascript">
+<!--
+
+var morpion = new Array(-1, -1, -1, -1, -1, -1, -1, -1, -1);
+var auJoueur1 = true;
+
+
+function placerSigne(idCase)
+{
+    if(morpion[idCase] == -1)
+    {
+    var image = (auJoueur1) ? 0:1;
+    document.getElementById(idCase).innerHTML = '<img src="'+image+'.gif" alt="image !" />';
+    morpion[idCase] = "1";
+
+    }
+    else
+    {
+    alert("Case occupée");
+    }
+
+    if(auJoueur1 == false)
+        {
+        auJoueur1 = true;
+        }
+        else
+        {
+        auJoueur1 = false;
+        }
+
+
+}
+function resetGame()
+{
+    for(var i=0;i<9;i++)
+    {
+    morpion[i] = "";
+    }
+}
+function reglesJeu()
+{
+alert("Voici les règles du morpion Tic Tac Toe : \n Le but du jeu est d'aligner trois croix ou trois rond. Le premier qui réussit à aligner trois de ses signes remporte la manche.\n Il y a autant de manches que vous désirez. Il suffit de réinitialiser la grille à la fin de la manche en cliquant sur le lien ou d'attendre qu'elle se réinitialise toute seule (15 sec)");
+}
+
+for(var i=0; i<9; i++)
+{
+ document.write(morpion[i]);
+ }
+
+
+
+-->
+</script>
+<table class="table" align="center">
+    <tr>
+        <td class="td" onclick="placerSigne(0)" id="0">&nbsp;</td>
+        <td class="td" onclick="placerSigne(1)" id="1">&nbsp;</td>
+
+        <td class="td" onclick="placerSigne(2)" id="2">&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="td" onclick="placerSigne(3)" id="3">&nbsp;</td>
+        <td class="td" onclick="placerSigne(4)" id="4">&nbsp;</td>
+        <td class="td" onclick="placerSigne(5)" id="5">&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="td" onclick="placerSigne(6)" id="6">&nbsp;</td>
+
+        <td class="td" onclick="placerSigne(7)" id="7">&nbsp;</td>
+        <td class="td" onclick="placerSigne(8)" id="8">&nbsp;</td>
+    </tr>
+</table>
+<div id="joueur" style="text-align : center;">Au joueur 1 de jouer.<br /><a href="" onclick="reglesJeu()">R&egrave;gles du jeu</a></div>
+<div style="text-align:center;"><a href="" onclick="resetGame()">Réinitialiser la grille de jeu</a></div><br /><br />
+<table style="border : solid 3px #3399FF;" align="center">
+<tr>
+<td style="border : solid 1px #3399FF;">Joueur 1</td>
+<td style="border : solid 1px #3399FF;">Joueur 2</td>
+
+</tr>
+<tr>
+<td style="border : solid 1px #3399FF;" id="score0">0</td>
+<td style="border : solid 1px #3399FF;" id="score1">0</td>
+</tr>
+</table>
+
+</body>
+</html>

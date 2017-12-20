@@ -1,0 +1,23 @@
+h1 {
+  font-family: Arial;
+  color: red;
+  margin-left:120px;
+}
+
+.principe{
+  font-family: arial;
+  font-weight: bold;
+  text-align: justify;
+  color: black;
+  margin-right: 400px;
+}
+
+.deviner{
+  font-family: arial;
+  text-align: justify;
+  color: grey;
+  margin-right: 110px;
+}
+
+input1
+ padding-top : 100px;

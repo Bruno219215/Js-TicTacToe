@@ -1,0 +1,28 @@
+
+.table{
+width : 250px;
+height : 250px;
+border : solid 3px white;
+border-collapse: collapse;
+}
+
+.td{
+border : solid 3px white;
+width : 33%;
+height : 33%;
+}
+
+body
+{
+background-color:white;
+background-image:url(../IMG/image10.jpeg);
+background-repeat:no-repeat;
+background-position:100% 100%;
+}
+
+h1{
+color: white;
+margin-left: 170px;
+margin-top: 5px;
+font-family : arial
+}
